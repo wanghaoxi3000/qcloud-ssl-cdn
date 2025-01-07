@@ -45,16 +45,16 @@ docker run -d \
 * `ACME_ENABLED`: 是否启用 acme，不启用将证书映射到容器`/data/certs`目录
 * `PUSH_URLS`: CDN 刷新/预热地址，逗号分隔
 * `PUSH_URLS_PATH`: CDN 刷新/预热地址文件路径，文件映射到 Docker 容器，**路径不能是`/data/urls.txt`**
-* `UPLOAD_SSL`: 是否上传 SSL 证书,默认为`true`
-* `ENABLE_HTTP2`: 是否启用 HTTP2，默认为`true`
-* `ENABLE_HSTS`: 是否启用 HSTS，默认为`true`
+* `UPLOAD_SSL`: 是否上传 SSL 证书,默认为`True`
+* `ENABLE_HTTP2`: 是否启用 HTTP2，默认为`True`
+* `ENABLE_HSTS`: 是否启用 HSTS，默认为`True`
 * `HSTS_TIMEOUT_AGE`: HSTS 最大时间，默认为`31536000`
-* `HSTS_INCLUDE_SUBDOMAIN`: HSTS 包含子域，默认为`true`
-* `ENABLE_OCSP`: 是否启用 OCSP，默认为`true`
-* `DELETE_OLD_CERTS`: 是否删除适用于CDN_DOMAIN域名下的其他所有证书，默认为`true`
-* `UPDATE_SSL`: 是否进行为CDN_DOMAIN更换SSL证书的操作，默认为`true`
-* `PUSH_URLS`: 是否进行预热URL的操作，默认为`true`
-* `PURGE_URL`: 是否进行刷新URL的操作，默认为`true`
+* `HSTS_INCLUDE_SUBDOMAIN`: HSTS 包含子域，默认为`True`
+* `ENABLE_OCSP`: 是否启用 OCSP，默认为`True`
+* `DELETE_OLD_CERTS`: 是否删除适用于CDN_DOMAIN域名下的其他所有证书，默认为`True`
+* `UPDATE_SSL`: 是否进行为CDN_DOMAIN更换SSL证书的操作，默认为`True`
+* `PUSH_URLS`: 是否进行预热URL的操作，默认为`True`
+* `PURGE_URL`: 是否进行刷新URL的操作，默认为`True`
 
 
 
