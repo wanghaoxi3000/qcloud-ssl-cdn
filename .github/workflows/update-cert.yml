@@ -33,15 +33,9 @@ jobs:
         run: sh ./docker/update.sh
 
       - name: Notification
-        uses: monlor/bark-action@v3
         if: always()
-        with:
-          host: ${{ secrets.BARK_HOST}} # not required
-          key: ${{ secrets.BARK_KEY }}   # Your secret key
-          title: Github Actions
-          body: 'Your tencent cdn certs update ${{ job.status }}！'
-          isArchive: 1
-          url: 'github://github.com/${{ github.repository }}'
-          group: Github
-          icon: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-          copy: ${{ steps.meta.outputs.tags }}
+        run: |
+          curl -X POST \
+            -H "Content-Type: application/json;charset=utf-8" \
+            "https://sctapi.ftqq.com/${{ secrets.SERVERCHAN_KEY }}.send" \
+            -d '{"title":"Github Actions", "desp":"Your tencent cdn certs update ${{ job.status }}"}'
