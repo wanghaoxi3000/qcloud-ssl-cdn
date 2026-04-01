@@ -1,8 +1,9 @@
 name: Update Cert
 
 on:
-  schedule:
-    - cron: '0 10 1 * *'
+  # 定时触发已禁用
+  # schedule:
+  #   - cron: '0 10 1 * *'
   # add a tag to trigger manually
   workflow_dispatch:
 
